@@ -1,23 +1,10 @@
 {% extends "base.html" %}
 
-{% block content_title %}Welcome to my blog{% endblock %}
+{% block content_title %}Welcome to blogg - the place to air my thoughts{% endblock %}
 
 {% block content %}
 
-    {% if number %}
-        <p>Your number is {{ number|int }}</p>
-        <ul>
-            {%  for i in range(number|int) %}
-                {% if i is divisibleby 2 %}
-                <li>{{ i }}</li>
-                {% else %}
-                <li>{{ i }} and a half</li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    {% else %}
-        <p>No number specified, not even one!!</p>
-    {% endif %}
+    
 
     <p>your name is {{  name|default('<unknown>', True ) }} and you did not provide a number.</p>
 {% endblock %}
